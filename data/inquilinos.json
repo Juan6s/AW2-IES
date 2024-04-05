@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "nombre": "Lucía Rodríguez",
+    "dni": "35421987",
+    "telefono": "01123456789"
+  },
+  {
+    "id": 2,
+    "nombre": "Juan Martínez",
+    "dni": "40348296",
+    "telefono": "01134567890"
+  },
+  {
+    "id": 3,
+    "nombre": "María González",
+    "dni": "27593480",
+    "telefono": "01145678901"
+  },
+  {
+    "id": 4,
+    "nombre": "Carlos Fernández",
+    "dni": "37120845",
+    "telefono": "01156789012"
+  },
+  {
+    "id": 5,
+    "nombre": "Ana López",
+    "dni": "42679318",
+    "telefono": "01167890123"
+  },
+  {
+    "id": 6,
+    "nombre": "Diego Pérez",
+    "dni": "31857294",
+    "telefono": "01178901234"
+  },
+  {
+    "id": 7,
+    "nombre": "Laura Sánchez",
+    "dni": "23504983",
+    "telefono": "01189012345"
+  },
+  {
+    "id": 8,
+    "nombre": "Julián Torres",
+    "dni": "40763251",
+    "telefono": "01190123456"
+  },
+  {
+    "id": 9,
+    "nombre": "Valentina Ramírez",
+    "dni": "38196427",
+    "telefono": "01101234567"
+  },
+  {
+    "id": 10,
+    "nombre": "Facundo Acosta",
+    "dni": "29381574",
+    "telefono": "01112345678"
+  },
+  {
+    "id": 11,
+    "nombre": "Catalina Benítez",
+    "dni": "35967248",
+    "telefono": "01123456789"
+  },
+  {
+    "id": 12,
+    "nombre": "Gabriel Silva",
+    "dni": "43051897",
+    "telefono": "01134567890"
+  },
+  {
+    "id": 13,
+    "nombre": "Camila Romero",
+    "dni": "26504938",
+    "telefono": "01145678901"
+  },
+  {
+    "id": 14,
+    "nombre": "Lautaro Molina",
+    "dni": "37421986",
+    "telefono": "01156789012"
+  },
+  {
+    "id": 15,
+    "nombre": "Antonella Gómez",
+    "dni": "41679315",
+    "telefono": "01167890123"
+  },
+  {
+    "id": 16,
+    "nombre": "Agustín Vargas",
+    "dni": "32857291",
+    "telefono": "01178901234"
+  },
+  {
+    "id": 17,
+    "nombre": "Martina Pérez",
+    "dni": "24504980",
+    "telefono": "01189012345"
+  },
+  {
+    "id": 18,
+    "nombre": "Santiago Torres",
+    "dni": "41763258",
+    "telefono": "01190123456"
+  },
+  {
+    "id": 19,
+    "nombre": "Juana Ramírez",
+    "dni": "37196423",
+    "telefono": "01101234567"
+  },
+  {
+    "id": 20,
+    "nombre": "Lucas Acosta",
+    "dni": "49381570",
+    "telefono": "01112345678"
+  }
+]
