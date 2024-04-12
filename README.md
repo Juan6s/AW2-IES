@@ -1,3 +1,6 @@
-Juan F. Carrizo
-IES21
-2024
+# Inicio
+
+Para iniciar la api corra
+`npm run start`
+
+Juan F. Carrizo IES 2024

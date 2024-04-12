@@ -2,8 +2,10 @@
   "name": "aw2",
   "version": "1.0.0",
   "description": "trabajo practico para la materia de aplicaciones web 2, IES",
-  "main": "app.js",
+  "main": "src/app.js",
+  "type": "module",
   "scripts": {
+    "start": "node src/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "JFCarrizo02",
