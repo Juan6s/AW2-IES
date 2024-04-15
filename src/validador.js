@@ -12,10 +12,8 @@
 
 */
 export function convertir(esquema, valores) {
-  console.log(esquema);
   const valoresTraducidos = {};
   for (const estructuraDeDatos in esquema) {
-    console.log(estructuraDeDatos);
     const valorTraducido = traducir(
       valores[estructuraDeDatos],
       esquema[estructuraDeDatos].tipoDato
@@ -38,6 +36,7 @@ function traducir(valor, tipoDato) {
     }
     return numero;
   }
+
   if (tipoDato === "boolean") {
     if (valor === "true") {
       return true;
@@ -48,5 +47,9 @@ function traducir(valor, tipoDato) {
     return undefined;
   }
 
-  return valor; //asumimos que es string
+  if (tipoDato === "string") {
+    return String(valor);
+  }
+
+  return undefined;
 }
