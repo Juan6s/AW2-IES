@@ -1,18 +1,24 @@
 import { Router } from "express";
-import { getHospedajes } from "../proveedorInformacion.js";
+import { addHospedaje, getHospedajes } from "../proveedorInformacion.js";
 
 const rutaHospedaje = Router();
 
 rutaHospedaje.get("/", async (request, response) => {
   try {
     response.json(await getHospedajes());
-  } catch {}
+  } catch {
+    response.sendStatus(500);
+  }
 });
 
 rutaHospedaje.post("/", async (request, response) => {
-  const body = request.body;
-  console.log(body);
-  response.status(200).send("Solicitud POST recibida correctamente");
+  try {
+    await addHospedaje(request.body);
+    response.status(200).send("Hospedaje añadido correctamente");
+  } catch (error) {
+    console.log(error);
+    response.sendStatus(400);
+  }
 });
 
 rutaHospedaje.get("/:id", async (request, response) => {

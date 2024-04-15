@@ -1,10 +1,17 @@
 import fs from "fs";
-import { type } from "os";
+import { convertir } from "./validador.js";
 
-const archivos = {
+const ARCHIVOS = {
   inquilinos: "./data/inquilinos.json",
   hospedaje: "./data/hospedaje.json",
   reserva: "./data/reserva.json",
+};
+
+const HOSPEDAJE_ESQUEMA = {
+  nombre: { tipoDato: "string" },
+  ubicacion: { tipoDato: "string" },
+  precio_noche: { tipoDato: "number" },
+  habilitada: { tipoDato: "boolean" },
 };
 
 async function leerArchivo(archivo) {
@@ -19,46 +26,26 @@ async function leerArchivo(archivo) {
 async function agregarAlArchivo(archivo, nuevoRegistro) {
   const lectura = await fs.readFileSync(archivo, { encoding: "utf-8" });
   const json = JSON.parse(lectura);
-  const lastId = json[json.length].id;
-  json.id = lastId + 1;
+  const lastId = json[json.length - 1].id;
+  nuevoRegistro.id = lastId + 1;
   json.push(nuevoRegistro);
 
   await fs.writeFileSync(archivo, JSON.stringify(json));
 }
 
 export async function getInqulinos() {
-  return await leerArchivo(archivos.inquilinos);
+  return await leerArchivo(ARCHIVOS.inquilinos);
 }
 
 export async function getHospedajes() {
-  return await leerArchivo(archivos.hospedaje);
+  return await leerArchivo(ARCHIVOS.hospedaje);
 }
 
 export async function getReservas() {
-  return await leerArchivo(archivos.reserva);
+  return await leerArchivo(ARCHIVOS.reserva);
 }
 
-export async function addHospedaje(nombre, ubicacion, precioNoche, habilitada) {
-  if (typeof nombre !== "string") {
-    throw new Error("Nombre debe ser de tipo cadena");
-  }
-
-  if (typeof ubicacion !== "string") {
-    throw new Error("Ubicacion debe ser de tipo cadena");
-  }
-
-  if (typeof precioNoche !== "number") {
-    throw new Error("PrecioNoche debe ser de tipo numero");
-  }
-
-  if (typeof habilitada !== "boolean") {
-    throw new Error("habilitada debe ser de tipo booleano");
-  }
-
-  await agregarAlArchivo(archivos.hospedaje, {
-    nombre,
-    ubicacion,
-    precioNoche,
-    habilitada,
-  });
+export async function addHospedaje(valores) {
+  convertir(HOSPEDAJE_ESQUEMA, valores);
+  await agregarAlArchivo(ARCHIVOS.hospedaje, valores);
 }
