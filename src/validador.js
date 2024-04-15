@@ -13,17 +13,21 @@
 */
 export function convertir(esquema, valores) {
   console.log(esquema);
-  const valoresTraducidos = esquema.map((estructuraDeDatos) => {
-    if (
-      !traducir(valor[estructuraDeDatos.nombre], estructuraDeDatos.tipoDato)
-    ) {
+  const valoresTraducidos = {};
+  for (const estructuraDeDatos in esquema) {
+    console.log(estructuraDeDatos);
+    const valorTraducido = traducir(
+      valores[estructuraDeDatos],
+      esquema[estructuraDeDatos].tipoDato
+    );
+    if (valorTraducido === undefined) {
       throw new Error(
-        `La variable ${variable.nombre} no pudo ser convertida segun el esquema a ${estructuraDeDatos.tipoDato}`
+        `La variable ${estructuraDeDatos} no pudo ser convertida a ${esquema[estructuraDeDatos].tipoDato}`
       );
     }
-  });
-
-  return valoresTraducidos();
+    valoresTraducidos[estructuraDeDatos] = valores[estructuraDeDatos];
+  }
+  return valoresTraducidos;
 }
 
 function traducir(valor, tipoDato) {
@@ -46,16 +50,3 @@ function traducir(valor, tipoDato) {
 
   return valor; //asumimos que es string
 }
-
-console.log(
-  convertir(
-    {
-      nombre: { tipoDato: "string", nombre: "nombre" },
-      ubicacion: {
-        tipoDato: "string",
-        nombre: "ubicacion",
-      },
-    },
-    { nombre: "aca", ubicacion: "alla" }
-  )
-);
