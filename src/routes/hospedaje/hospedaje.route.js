@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { addHospedaje, getHospedajes } from "../proveedorInformacion.js";
+import { addHospedaje, getHospedajes } from "../../proveedorInformacion.js";
 
 const rutaHospedaje = Router();
 
@@ -14,7 +14,7 @@ rutaHospedaje.get("/", async (request, response) => {
 rutaHospedaje.post("/", async (request, response) => {
   try {
     await addHospedaje(request.body);
-    response.status(200).send("Hospedaje añadido correctamente");
+    response.status(201).send("Hospedaje añadido correctamente");
   } catch (error) {
     console.log(error);
     response.sendStatus(400);

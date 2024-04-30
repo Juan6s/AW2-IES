@@ -1,6 +1,6 @@
 import express from "express";
-import bodyParser from "body-parser";
-import rutaHospedaje from "./routes/hospedaje.route.js";
+import rutaHospedaje from "./routes/hospedaje/hospedaje.route.js";
+import rutaInquilinos from "./routes/inquilinos/inquilinos.route.js";
 
 const app = express();
 
@@ -16,3 +16,4 @@ app.get("/", function (request, response) {
 
 app.use(express.json());
 app.use("/hospedaje", rutaHospedaje);
+app.use("/inquilinos", rutaInquilinos);

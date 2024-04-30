@@ -14,6 +14,12 @@ const HOSPEDAJE_ESQUEMA = {
   habilitada: { tipoDato: "boolean" },
 };
 
+const INQUILINOS_ESQUEMA = {
+  nombre: { tipoDato: "string" },
+  dni: { tipoDato: "string" },
+  telefono: { tipoDato: "string" },
+};
+
 async function leerArchivo(archivo) {
   try {
     const lectura = await fs.readFileSync(archivo, { encoding: "utf-8" });
@@ -48,4 +54,9 @@ export async function getReservas() {
 export async function addHospedaje(valores) {
   convertir(HOSPEDAJE_ESQUEMA, valores);
   await agregarAlArchivo(ARCHIVOS.hospedaje, valores);
+}
+
+export async function addInquilinos(valores) {
+  convertir(INQUILINOS_ESQUEMA, valores);
+  await agregarAlArchivo(ARCHIVOS.inquilinos, valores);
 }

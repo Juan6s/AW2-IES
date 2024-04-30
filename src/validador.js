@@ -11,6 +11,7 @@
 }
 
 */
+
 export function convertir(esquema, valores) {
   const valoresTraducidos = {};
   for (const estructuraDeDatos in esquema) {
@@ -18,6 +19,7 @@ export function convertir(esquema, valores) {
       valores[estructuraDeDatos],
       esquema[estructuraDeDatos].tipoDato
     );
+
     if (valorTraducido === undefined) {
       throw new Error(
         `La variable ${estructuraDeDatos} no pudo ser convertida a ${esquema[estructuraDeDatos].tipoDato}`
@@ -48,7 +50,7 @@ function traducir(valor, tipoDato) {
   }
 
   if (tipoDato === "string") {
-    return String(valor);
+    if (typeof valor === "string") return valor;
   }
 
   return undefined;
