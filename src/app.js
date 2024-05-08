@@ -1,6 +1,7 @@
 import express from "express";
 import rutaHospedaje from "./routes/hospedaje/hospedaje.route.js";
 import rutaInquilinos from "./routes/inquilinos/inquilinos.route.js";
+import rutaReserva from "./routes/reserva/reserva.route.js";
 
 const app = express();
 
@@ -17,3 +18,4 @@ app.get("/", function (request, response) {
 app.use(express.json());
 app.use("/hospedaje", rutaHospedaje);
 app.use("/inquilinos", rutaInquilinos);
+app.use("/reserva", rutaReserva);

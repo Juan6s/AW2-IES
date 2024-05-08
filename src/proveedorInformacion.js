@@ -20,6 +20,18 @@ const INQUILINOS_ESQUEMA = {
   telefono: { tipoDato: "string" },
 };
 
+const RESERVA_ESQUEMA = {
+  id_inquilino: { tipoDato: "number" },
+  id_hospedaje: { tipoDato: "number" },
+  fecha_ingreso: { tipoDato: "string" },
+  fecha_egreso: { tipoDato: "string" },
+};
+
+const ACOMPANANTE_ESQUEMA = {
+  nombre: { tipoDato: "string" },
+  edad: { tipoDato: "number" },
+};
+
 async function leerArchivo(archivo) {
   try {
     const lectura = await fs.readFileSync(archivo, { encoding: "utf-8" });
@@ -59,4 +71,21 @@ export async function addHospedaje(valores) {
 export async function addInquilinos(valores) {
   convertir(INQUILINOS_ESQUEMA, valores);
   await agregarAlArchivo(ARCHIVOS.inquilinos, valores);
+}
+
+export async function addReserva({ reserva, acompanantes }) {
+  convertir(RESERVA_ESQUEMA, reserva);
+
+  for (const acompanante of acompanantes) {
+    convertir(ACOMPANANTE_ESQUEMA, acompanante);
+  }
+  await agregarAlArchivo(ARCHIVOS.reserva, {
+    id_inquilino: reserva.id_inquilino,
+    id_hospedaje: reserva.id_hospedaje,
+    fechas: {
+      ingreso: reserva.fecha_ingreso,
+      salida: reserva.fecha_egreso,
+    },
+    acompanantes,
+  });
 }
