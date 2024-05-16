@@ -1,11 +1,12 @@
 import { Router } from "express";
-import { addReserva, getReservas } from "../../proveedorInformacion.js";
+import { obtenerReservas } from "../../reserva/obtenerReserva.js";
+import { crearReserva } from "../../reserva/crearReserva.js";
 
 const rutaReserva = Router();
 
 rutaReserva.get("/", async (request, response) => {
   try {
-    response.json(await getReservas());
+    response.json(await obtenerReservas());
   } catch {
     response.sendStatus(500);
   }
@@ -13,7 +14,7 @@ rutaReserva.get("/", async (request, response) => {
 
 rutaReserva.post("/", async (request, response) => {
   try {
-    await addReserva(request.body);
+    await crearReserva(request.body);
     response.status(201).send("Hospedaje añadido correctamente");
   } catch (e) {
     console.log(e);

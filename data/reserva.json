@@ -1,1 +1,118 @@
-[{"id":1,"id_inquilino":7,"id_hospedaje":15,"fechas":{"ingreso":"2024-04-10","salida":"2024-04-15"},"acompanantes":[{"nombre":"María Rodríguez","edad":28},{"nombre":"Pedro Martínez","edad":30}]},{"id":2,"id_inquilino":14,"id_hospedaje":13,"fechas":{"ingreso":"2024-05-01","salida":"2024-05-05"},"acompanantes":[{"nombre":"Ana López","edad":35},{"nombre":"Juan García","edad":32},{"nombre":"Carla Martínez","edad":28}]},{"id":3,"id_inquilino":9,"id_hospedaje":10,"fechas":{"ingreso":"2024-06-10","salida":"2024-06-15"},"acompanantes":[{"nombre":"Lucía Pérez","edad":25}]},{"id":4,"id_inquilino":3,"id_hospedaje":19,"fechas":{"ingreso":"2024-07-20","salida":"2024-07-25"},"acompanantes":[{"nombre":"Carolina Díaz","edad":40},{"nombre":"Andrés Sánchez","edad":45},{"nombre":"Mariano López","edad":22},{"nombre":"Camila Gómez","edad":26}]},{"id":5,"id_inquilino":20,"id_hospedaje":7,"fechas":{"ingreso":"2024-08-05","salida":"2024-08-10"},"acompanantes":[{"nombre":"Sofía Martínez","edad":22},{"nombre":"Martín López","edad":24},{"nombre":"Valentina Rodríguez","edad":30},{"nombre":"Lucas Pérez","edad":32}]},{"id":6,"id_inquilino":1,"id_hospedaje":4,"fechas":{"ingreso":"2024-09-15","salida":"2024-09-20"},"acompanantes":[]},{"id":7,"id_inquilino":8,"id_hospedaje":17,"fechas":{"ingreso":"2024-10-10","salida":"2024-10-15"},"acompanantes":[{"nombre":"Gustavo Rodríguez","edad":35},{"nombre":"Luisa Pérez","edad":33},{"nombre":"Federico Martínez","edad":42},{"nombre":"Gabriela López","edad":38},{"nombre":"Micaela Rodríguez","edad":29}]},{"id_inquilino":1,"id_hospedaje":1,"fechas":{"ingreso":"07/05/2024","salida":"07/05/2024"},"acompanantes":[{"nombre":"juan","edad":10},{"nombre":"juan","edad":10},{"nombre":"juan","edad":10}],"id":8},{"id_inquilino":1,"id_hospedaje":1,"fechas":{"ingreso":"07/05/2024","salida":"07/05/2024"},"acompanantes":[{"nombre":"juan","edad":10},{"nombre":"juan","edad":10},{"nombre":"juan","edad":10}],"id":9},{"id_inquilino":1,"id_hospedaje":1,"fechas":{"ingreso":"07/05/2024","salida":"07/05/2024"},"acompanantes":[{"nombre":"juan","edad":10},{"nombre":"juan","edad":10},{"nombre":"juan","edad":10}],"id":10},{"id_inquilino":1,"id_hospedaje":1,"fechas":{"ingreso":"07/05/2024","salida":"07/05/2024"},"acompanantes":[{"nombre":"juan","edad":"10"},{"nombre":"juan","edad":10},{"nombre":"juan","edad":10}],"id":11}]
+[
+  {
+    "id": 1,
+    "id_inquilino": 7,
+    "id_hospedaje": 15,
+    "fechas": { "ingreso": "2024-04-10", "salida": "2024-04-15" },
+    "acompanantes": [
+      { "nombre": "María Rodríguez", "edad": 28 },
+      { "nombre": "Pedro Martínez", "edad": 30 }
+    ]
+  },
+  {
+    "id": 2,
+    "id_inquilino": 14,
+    "id_hospedaje": 13,
+    "fechas": { "ingreso": "2024-05-01", "salida": "2024-05-05" },
+    "acompanantes": [
+      { "nombre": "Ana López", "edad": 35 },
+      { "nombre": "Juan García", "edad": 32 },
+      { "nombre": "Carla Martínez", "edad": 28 }
+    ]
+  },
+  {
+    "id": 3,
+    "id_inquilino": 9,
+    "id_hospedaje": 10,
+    "fechas": { "ingreso": "2024-06-10", "salida": "2024-06-15" },
+    "acompanantes": [{ "nombre": "Lucía Pérez", "edad": 25 }]
+  },
+  {
+    "id": 4,
+    "id_inquilino": 3,
+    "id_hospedaje": 19,
+    "fechas": { "ingreso": "2024-07-20", "salida": "2024-07-25" },
+    "acompanantes": [
+      { "nombre": "Carolina Díaz", "edad": 40 },
+      { "nombre": "Andrés Sánchez", "edad": 45 },
+      { "nombre": "Mariano López", "edad": 22 },
+      { "nombre": "Camila Gómez", "edad": 26 }
+    ]
+  },
+  {
+    "id": 5,
+    "id_inquilino": 20,
+    "id_hospedaje": 7,
+    "fechas": { "ingreso": "2024-08-05", "salida": "2024-08-10" },
+    "acompanantes": [
+      { "nombre": "Sofía Martínez", "edad": 22 },
+      { "nombre": "Martín López", "edad": 24 },
+      { "nombre": "Valentina Rodríguez", "edad": 30 },
+      { "nombre": "Lucas Pérez", "edad": 32 }
+    ]
+  },
+  {
+    "id": 6,
+    "id_inquilino": 1,
+    "id_hospedaje": 4,
+    "fechas": { "ingreso": "2024-09-15", "salida": "2024-09-20" },
+    "acompanantes": []
+  },
+  {
+    "id": 7,
+    "id_inquilino": 8,
+    "id_hospedaje": 17,
+    "fechas": { "ingreso": "2024-10-10", "salida": "2024-10-15" },
+    "acompanantes": [
+      { "nombre": "Gustavo Rodríguez", "edad": 35 },
+      { "nombre": "Luisa Pérez", "edad": 33 },
+      { "nombre": "Federico Martínez", "edad": 42 },
+      { "nombre": "Gabriela López", "edad": 38 },
+      { "nombre": "Micaela Rodríguez", "edad": 29 }
+    ]
+  },
+  {
+    "id_inquilino": 1,
+    "id_hospedaje": 1,
+    "fechas": { "ingreso": "07/05/2024", "salida": "07/05/2024" },
+    "acompanantes": [
+      { "nombre": "juan", "edad": 10 },
+      { "nombre": "juan", "edad": 10 },
+      { "nombre": "juan", "edad": 10 }
+    ],
+    "id": 8
+  },
+  {
+    "id_inquilino": 1,
+    "id_hospedaje": 1,
+    "fechas": { "ingreso": "07/05/2024", "salida": "07/05/2024" },
+    "acompanantes": [
+      { "nombre": "juan", "edad": 10 },
+      { "nombre": "juan", "edad": 10 },
+      { "nombre": "juan", "edad": 10 }
+    ],
+    "id": 9
+  },
+  {
+    "id_inquilino": 1,
+    "id_hospedaje": 1,
+    "fechas": { "ingreso": "07/05/2024", "salida": "07/05/2024" },
+    "acompanantes": [
+      { "nombre": "juan", "edad": 10 },
+      { "nombre": "juan", "edad": 10 },
+      { "nombre": "juan", "edad": 10 }
+    ],
+    "id": 10
+  },
+  {
+    "id_inquilino": 1,
+    "id_hospedaje": 1,
+    "fechas": { "ingreso": "07/05/2024", "salida": "07/05/2024" },
+    "acompanantes": [
+      { "nombre": "juan", "edad": "10" },
+      { "nombre": "juan", "edad": 10 },
+      { "nombre": "juan", "edad": 10 }
+    ],
+    "id": 11
+  }
+]

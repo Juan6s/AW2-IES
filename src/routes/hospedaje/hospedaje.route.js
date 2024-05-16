@@ -1,19 +1,21 @@
 import { Router } from "express";
-import { addHospedaje, getHospedajes } from "../../proveedorInformacion.js";
+import { crearHospedaje } from "../../hospedaje/crearHospedaje.js";
+import { obtenerHospedajes } from "../../hospedaje/obtenerHospedajes.js";
 
 const rutaHospedaje = Router();
 
 rutaHospedaje.get("/", async (request, response) => {
   try {
-    response.json(await getHospedajes());
-  } catch {
+    response.json(await obtenerHospedajes());
+  } catch (error) {
+    console.log(error);
     response.sendStatus(500);
   }
 });
 
 rutaHospedaje.post("/", async (request, response) => {
   try {
-    await addHospedaje(request.body);
+    await crearHospedaje(request.body);
     response.status(201).send("Hospedaje añadido correctamente");
   } catch (error) {
     console.log(error);
@@ -23,12 +25,9 @@ rutaHospedaje.post("/", async (request, response) => {
 
 rutaHospedaje.get("/:id", async (request, response) => {
   try {
-    const listaHospedajes = await getHospedajes();
+    const listaHospedajes = await obtenerHospedajes();
     const hospedaje = listaHospedajes.filter((hospedaje) => {
-      if (hospedaje.id === parseInt(request.params.id)) {
-        return true;
-      }
-      return false;
+      return hospedaje.id === parseInt(request.params.id);
     });
     response.json(hospedaje);
   } catch {
