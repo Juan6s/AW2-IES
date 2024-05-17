@@ -1,17 +1,3 @@
-/*
-{ 
-    nombre: {
-        tipoDato: "string",
-        nombre: "nombre"
-    },
-    ubicacion: {
-        tipoDato: "string",
-        nombre: "ubicacion"
-    }
-}
-
-*/
-
 export function convertir(esquema, valores) {
   const valoresTraducidos = {};
   for (const estructuraDeDatos in esquema) {

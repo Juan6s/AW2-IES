@@ -24,3 +24,20 @@ export async function agregarAlArchivo(archivo, nuevoRegistro) {
 
   await fs.writeFileSync(archivo, JSON.stringify(json));
 }
+
+export async function editarRegistroArchivo(
+  archivo,
+  idRegistro,
+  nuevoRegistro
+) {
+  const lectura = await fs.readFileSync(archivo, { encoding: "utf-8" });
+  const registros = JSON.parse(lectura);
+  const registrosActualizados = registros.map((registro) => {
+    if (registro.id === idRegistro) {
+      nuevoRegistro.id = idRegistro;
+      return nuevoRegistro;
+    }
+    return registro;
+  });
+  await fs.writeFileSync(archivo, JSON.stringify(registrosActualizados));
+}
