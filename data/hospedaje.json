@@ -3,78 +3,88 @@
     "id": 1,
     "nombre": "Cabaña 1",
     "ubicacion": "Córdoba",
-    "precio_noche": 14500,
-    "habilitada": true
+    "precio_noche": 1,
+    "habilitada": true,
+    "max_inquilinos": 2
   },
-
   {
     "id": 2,
     "nombre": "Cabaña 2",
     "ubicacion": "Bariloche",
-    "precio_noche": 18000,
-    "habilitada": true
+    "precio_noche": 1,
+    "habilitada": true,
+    "max_inquilinos": 4
   },
   {
     "id": 3,
     "nombre": "Cabaña 3",
     "ubicacion": "Mendoza",
     "precio_noche": 12500,
-    "habilitada": true
+    "habilitada": true,
+    "max_inquilinos": 6
   },
   {
     "id": 4,
     "nombre": "Cabaña 4",
     "ubicacion": "Mar del Plata",
     "precio_noche": 9500,
-    "habilitada": false
+    "habilitada": false,
+    "max_inquilinos": 2
   },
   {
     "id": 5,
     "nombre": "Cabaña 5",
     "ubicacion": "Salta",
     "precio_noche": 15500,
-    "habilitada": true
+    "habilitada": true,
+    "max_inquilinos": 5
   },
   {
     "id": 6,
     "nombre": "Cabaña 6",
     "ubicacion": "San Martín de los Andes",
     "precio_noche": 20000,
-    "habilitada": true
+    "habilitada": true,
+    "max_inquilinos": 4
   },
   {
     "id": 7,
     "nombre": "Cabaña 7",
     "ubicacion": "Tandil",
     "precio_noche": 13500,
-    "habilitada": false
+    "habilitada": false,
+    "max_inquilinos": 3
   },
   {
     "id": 8,
     "nombre": "Cabaña 8",
     "ubicacion": "Villa Gesell",
     "precio_noche": 10500,
-    "habilitada": true
+    "habilitada": true,
+    "max_inquilinos": 7
   },
   {
     "id": 9,
     "nombre": "Cabaña 9",
     "ubicacion": "El Calafate",
     "precio_noche": 22000,
-    "habilitada": false
+    "habilitada": false,
+    "max_inquilinos": 2
   },
   {
     "id": 10,
     "nombre": "Cabaña 10",
     "ubicacion": "Ushuaia",
     "precio_noche": 25000,
-    "habilitada": true
+    "habilitada": true,
+    "max_inquilinos": 9
   },
   {
     "id": 11,
     "nombre": "Cabaña 11",
     "ubicacion": "Puerto Madryn",
     "precio_noche": 17000,
-    "habilitada": true
+    "habilitada": true,
+    "max_inquilinos": 5
   }
 ]

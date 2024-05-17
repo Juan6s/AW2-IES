@@ -13,7 +13,7 @@ export async function editarNombreInquilino(id, valores) {
   convertir(EDITAR_INQUILINO, valores);
   const inquilinos = await leerArchivo(ARCHIVOS.inquilinos);
   const inquilinoEditable = inquilinos.find((inquilino) => {
-    return inquilino.id === id ? true : false;
+    return inquilino.id === id;
   });
   inquilinoEditable.nombre = valores.nombre;
   console.log(inquilinoEditable);

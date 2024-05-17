@@ -7,6 +7,7 @@ const CREAR_HOSPEDAJE = {
   ubicacion: { tipoDato: "string" },
   precio_noche: { tipoDato: "number" },
   habilitada: { tipoDato: "boolean" },
+  max_inquilinos: { tipoDato: "number" },
 };
 
 export async function crearHospedaje(valores) {

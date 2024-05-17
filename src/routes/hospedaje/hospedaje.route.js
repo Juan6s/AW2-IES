@@ -1,6 +1,7 @@
 import { Router } from "express";
 import { crearHospedaje } from "../../hospedaje/crearHospedaje.js";
 import { obtenerHospedajes } from "../../hospedaje/obtenerHospedajes.js";
+import { editarPrecioHospedaje } from "../../hospedaje/editarHospedaje.js";
 
 const rutaHospedaje = Router();
 
@@ -32,6 +33,16 @@ rutaHospedaje.get("/:id", async (request, response) => {
     response.json(hospedaje);
   } catch {
     response.sendStatus(500);
+  }
+});
+
+rutaHospedaje.put("/:id", async (request, response) => {
+  try {
+    await editarPrecioHospedaje(Number(request.params.id), request.body);
+    response.status(201).send("Hospedaje editado correctamente");
+  } catch (e) {
+    console.log(e);
+    response.sendStatus(400);
   }
 });
 
