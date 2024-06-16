@@ -1,4 +1,5 @@
 import express from "express";
+import cors from "cors";
 import rutaHospedaje from "./routes/hospedaje/hospedaje.route.js";
 import rutaInquilinos from "./routes/inquilinos/inquilinos.route.js";
 import rutaReserva from "./routes/reserva/reserva.route.js";
@@ -16,6 +17,8 @@ app.get("/", function (request, response) {
 });
 
 app.use(express.json());
+app.use(cors());
+
 app.use("/hospedaje", rutaHospedaje);
 app.use("/inquilinos", rutaInquilinos);
 app.use("/reserva", rutaReserva);
