@@ -41,3 +41,15 @@ export async function editarRegistroArchivo(
   });
   await fs.writeFileSync(archivo, JSON.stringify(registrosActualizados));
 }
+
+export async function eliminarRegistroArchivo(archivo, idRegistro) {
+  const lectura = await fs.readFileSync(archivo, { encoding: "utf-8" });
+  const registros = JSON.parse(lectura);
+  const registrosActualizados = registros.filter((registro) => {
+    if (registro.id !== idRegistro) {
+      return registro;
+    }
+  });
+  console.log(registrosActualizados);
+  await fs.writeFileSync(archivo, JSON.stringify(registrosActualizados));
+}
