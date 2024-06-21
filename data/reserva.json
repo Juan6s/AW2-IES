@@ -55,14 +55,14 @@
     "id": 6,
     "id_inquilino": 1,
     "id_hospedaje": 4,
-    "fechas": { "ingreso": "2024-09-15", "salida": "2024-09-20" },
+    "fechas": { "ingreso": "2024-09-15", "salida": "2024-09-27" },
     "acompanantes": []
   },
   {
     "id": 7,
     "id_inquilino": 8,
     "id_hospedaje": 17,
-    "fechas": { "ingreso": "2024-10-10", "salida": "2024-10-15" },
+    "fechas": { "ingreso": "2024-10-10", "salida": "2024-10-21" },
     "acompanantes": [
       { "nombre": "Gustavo Rodríguez", "edad": 35 },
       { "nombre": "Luisa Pérez", "edad": 33 },
@@ -74,7 +74,7 @@
   {
     "id_inquilino": 1,
     "id_hospedaje": 1,
-    "fechas": { "ingreso": "07/05/2024", "salida": "07/05/2024" },
+    "fechas": { "ingreso": "2024-10-10", "salida": "2024-10-21" },
     "acompanantes": [
       { "nombre": "juan", "edad": 10 },
       { "nombre": "juan", "edad": 10 },
@@ -85,7 +85,7 @@
   {
     "id_inquilino": 1,
     "id_hospedaje": 1,
-    "fechas": { "ingreso": "07/05/2024", "salida": "07/05/2024" },
+    "fechas": { "ingreso": "2024-10-10", "salida": "2024-10-22" },
     "acompanantes": [
       { "nombre": "juan", "edad": 10 },
       { "nombre": "juan", "edad": 10 },
@@ -96,7 +96,7 @@
   {
     "id_inquilino": 1,
     "id_hospedaje": 1,
-    "fechas": { "ingreso": "07/05/2024", "salida": "07/05/2024" },
+    "fechas": { "ingreso": "2024-10-10", "salida": "2024-12-10" },
     "acompanantes": [
       { "nombre": "juan", "edad": 10 },
       { "nombre": "juan", "edad": 10 },
@@ -107,7 +107,7 @@
   {
     "id_inquilino": 1,
     "id_hospedaje": 1,
-    "fechas": { "ingreso": "07/05/2024", "salida": "07/05/2024" },
+    "fechas": { "ingreso": "2024-9-10", "salida": "2024-11-10" },
     "acompanantes": [
       { "nombre": "juan", "edad": "10" },
       { "nombre": "juan", "edad": 10 },
