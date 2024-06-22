@@ -1,4 +1,5 @@
 import { agregarAlArchivo } from "../manejadorArchivos.js";
+import { ARCHIVOS } from "../manejadorArchivos.js";
 import { convertir } from "../validador.js";
 
 const RESERVA = {
