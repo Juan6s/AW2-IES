@@ -2,12 +2,13 @@ import { Router } from "express";
 import { crearInquilino } from "../../inquilino/crearInquilino.js";
 import { obtenerInqulinos } from "../../inquilino/obtenerInquilinos.js";
 import { editarNombreInquilino } from "../../inquilino/editarInquilino.js";
+import { Guest } from "../../models/guest.js";
 
 const rutaInquilinos = Router();
 
 rutaInquilinos.get("/", async (request, response) => {
   try {
-    response.json(await obtenerInqulinos());
+    response.json(await Guest.find({}));
   } catch {
     response.sendStatus(500);
   }
@@ -15,17 +16,17 @@ rutaInquilinos.get("/", async (request, response) => {
 
 rutaInquilinos.post("/", async (request, response) => {
   try {
-    await crearInquilino(request.body);
+    await Guest.create(request.body);
     response.status(201).send("Inquilino añadido correctamente");
-  } catch (e) {
+  } catch (error) {
     console.log(e);
-    response.sendStatus(400);
+    response.status(400).send(e);
   }
 });
 
 rutaInquilinos.put("/:id", async (request, response) => {
   try {
-    await editarNombreInquilino(Number(request.params.id), request.body);
+    await Guest.findByIdAndUpdate(request.params.id, request.body);
     response.status(201).send("Inquilino editado correctamente");
   } catch (e) {
     console.log(e);

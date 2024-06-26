@@ -1,4 +1,4 @@
-import { Schema } from "mongoose";
+import mongoose, { Schema } from "mongoose";
 
 const guestSchema = Schema({
   name: { type: String, required: true },
