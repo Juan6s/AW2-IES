@@ -1,6 +1,7 @@
 import { Router } from "express";
-import bcrypt from "bcrypt";
 import { User } from "../../models/user.js";
+import jwt from "jsonwebtoken";
+import bcrypt from "bcrypt";
 
 const loginRouter = Router();
 
@@ -14,7 +15,11 @@ loginRouter.post("/", async (request, response) => {
       response.status(400).send("Invalid credentials");
       return;
     }
-    response.status(200).send(isSuccess);
+    const token = jwt.sign({ email, id: user._id }, process.env.JWT_SECRET, {
+      expiresIn: "2h",
+    });
+
+    response.status(200).send(token);
   } catch (error) {
     console.log(error);
     response.status(400).send(error);
