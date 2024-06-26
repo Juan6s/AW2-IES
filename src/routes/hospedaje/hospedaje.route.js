@@ -1,7 +1,4 @@
 import { Router } from "express";
-import { crearHospedaje } from "../../hospedaje/crearHospedaje.js";
-import { obtenerHospedajes } from "../../hospedaje/obtenerHospedajes.js";
-import { editarPrecioHospedaje } from "../../hospedaje/editarHospedaje.js";
 import { Housing } from "../../models/housing.js";
 
 const rutaHospedaje = Router();

@@ -1,7 +1,4 @@
 import { Router } from "express";
-import { crearInquilino } from "../../inquilino/crearInquilino.js";
-import { obtenerInqulinos } from "../../inquilino/obtenerInquilinos.js";
-import { editarNombreInquilino } from "../../inquilino/editarInquilino.js";
 import { Guest } from "../../models/guest.js";
 
 const rutaInquilinos = Router();

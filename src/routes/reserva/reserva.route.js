@@ -1,8 +1,4 @@
 import { Router } from "express";
-import { obtenerReservas } from "../../reserva/obtenerReserva.js";
-import { crearReserva } from "../../reserva/crearReserva.js";
-import { editarFechasReserva } from "../../reserva/editarReserva.js";
-import { eliminarReserva } from "../../reserva/elimarReserva.js";
 import { Booking } from "../../models/booking.js";
 
 const rutaReserva = Router();
