@@ -1,14 +1,17 @@
 import { Router } from "express";
 import { Housing } from "../../models/housing.js";
+import { checkTokenMiddleware } from "../../middleware/auth.middleware.js";
 
 const rutaHospedaje = Router();
+
+rutaHospedaje.use(checkTokenMiddleware);
 
 rutaHospedaje.get("/", async (request, response) => {
   try {
     response.json(await Housing.find({}));
   } catch (error) {
     console.log(error);
-    response.sendStatus(500);
+    response.status(500).json(error.toString());
   }
 });
 

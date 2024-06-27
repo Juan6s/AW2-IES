@@ -1,7 +1,9 @@
 import { Router } from "express";
 import { Guest } from "../../models/guest.js";
+import { checkTokenMiddleware } from "../../middleware/auth.middleware.js";
 
 const rutaInquilinos = Router();
+rutaInquilinos.use(checkTokenMiddleware);
 
 rutaInquilinos.get("/", async (request, response) => {
   try {

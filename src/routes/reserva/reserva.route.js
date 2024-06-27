@@ -1,7 +1,9 @@
 import { Router } from "express";
 import { Booking } from "../../models/booking.js";
+import { checkTokenMiddleware } from "../../middleware/auth.middleware.js";
 
 const rutaReserva = Router();
+rutaReserva.use(checkTokenMiddleware);
 
 rutaReserva.get("/", async (request, response) => {
   try {
